@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>写日记 - 心灵日记本</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <a href="index.html" class="back-btn">←</a>
+            <h1>写日记</h1>
+            <p class="current-date" id="currentDate"></p>
+        </header>
+        
+        <main class="main-content">
+            <div class="diary-entry-container">
+                <div class="weather-info">
+                    <span id="currentWeather">☀️ 晴朗</span>
+                    <span id="currentTime"></span>
+                </div>
+                
+                <div class="input-methods">
+                    <button id="textInputBtn" class="input-method-btn active">文字</button>
+                    <button id="voiceInputBtn" class="input-method-btn">语音</button>
+                </div>
+                
+                <div class="ai-prompt">
+                    <p>今天有什么想记录的事情吗？或者试试这个提示：<span id="aiPromptText"></span></p>
+                </div>
+                 <!-- 新增引导步骤导航 -->
+                <div class="guide-steps">
+                    <div class="step active" data-step="1">1. 回顾今日</div>
+                    <div class="step" data-step="2">2. 情绪觉察</div>
+                    <div class="step" data-step="3">3. 深度思考</div>
+                    <div class="step" data-step="4">4. 明日展望</div>
+                </div>
+                 <!-- 动态引导提示区 -->
+                 <div class="ai-guide-container">
+                    <div class="ai-guide active" data-for-step="1">
+                        <h3>📌 今日关键点提示</h3>
+                        <p id="todayGuideText">试着描述今天最值得记录的3件事...</p>
+                        <ul id="step1Tips"></ul>
+                    </div>
+                    <!-- 其他步骤的引导内容将通过JS动态生成 -->
+                </div>
+                   <!-- 原有输入区域保持不变，但增加实时反馈区 -->
+                   <div class="real-time-feedback">
+                    <p>AI发现您提到了：<span id="detectedTopics">暂无</span></p>
+                    <div id="followupQuestions"></div>
+                </div>
+                <textarea id="diaryContent" placeholder="写下你的想法、感受或经历..."></textarea>
+                
+                <div class="image-upload">
+                    <label for="diaryImage" class="upload-btn">
+                        <span class="icon">📷</span> 添加图片
+                    </label>
+                    <input type="file" id="diaryImage" accept="image/*" style="display: none;">
+                    <div id="imagePreview" class="image-preview"></div>
+                </div>
+                
+                <button id="submitDiary" class="btn-primary">完成日记</button>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/diary-entry.js"></script>
+</body>
+</html>

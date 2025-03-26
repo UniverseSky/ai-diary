@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行动建议 - 心灵日记本</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <a href="index.html" class="back-btn">←</a>
+            <h1>行动建议</h1>
+        </header>
+        
+        <main class="main-content">
+            <div class="action-list-container">
+                <div class="filter-actions">
+                    <button id="filterAll" class="filter-btn active">全部</button>
+                    <button id="filterActive" class="filter-btn">进行中</button>
+                    <button id="filterCompleted" class="filter-btn">已完成</button>
+                </div>
+                
+                <div id="actionItems" class="action-items">
+                    <!-- 行动建议将通过JS动态生成 -->
+                    <div class="empty-state">
+                        <p>还没有行动建议</p>
+                        <p>开始写日记获取AI建议吧</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/action-list.js"></script>
+</body>
+</html>

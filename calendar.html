@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日历 - 心灵日记本</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <a href="index.html" class="back-btn">←</a>
+            <h1>日历</h1>
+            <div class="calendar-nav">
+                <button id="prevWeek">←</button>
+                <h2 id="currentWeekRange">2023年11月13日-19日</h2>
+                <button id="nextWeek">→</button>
+            </div>
+        </header>
+        
+        <main class="main-content">
+            <div class="week-calendar">
+                <div class="weekdays-header">
+                    <div>周日</div>
+                    <div>周一</div>
+                    <div>周二</div>
+                    <div>周三</div>
+                    <div>周四</div>
+                    <div>周五</div>
+                    <div>周六</div>
+                </div>
+                
+                <div id="weekDays" class="week-days">
+                    <!-- 周视图将通过JS动态生成 -->
+                </div>
+            </div>
+            
+            <div id="selectedDayContent" class="selected-day-content">
+                <h3 id="selectedDayTitle">2023年11月15日 星期三</h3>
+                
+                <div class="day-mood-summary">
+                    <h4>今日心情</h4>
+                    <div id="dayMood" class="mood-indicator">
+                        <!-- 心情指示器将通过JS动态生成 -->
+                    </div>
+                </div>
+                
+                <div class="day-diaries">
+                    <h4>日记记录</h4>
+                    <div id="dayDiariesList">
+                        <!-- 日记列表将通过JS动态生成 -->
+                    </div>
+                </div>
+                
+                <div class="day-actions">
+                    <h4>行动建议</h4>
+                    <div id="dayActionsList">
+                        <!-- 行动建议列表将通过JS动态生成 -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/calendar.js"></script>
+</body>
+</html>

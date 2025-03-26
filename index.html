@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心灵日记本</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>心灵日记本</h1>
+            <p class="current-date" id="currentDate"></p>
+        </header>
+        
+        <nav class="main-nav">
+            <a href="index.html" class="nav-item active">
+                <span class="icon">📝</span>
+                <span>写日记</span>
+            </a>
+            <a href="action-list.html" class="nav-item">
+                <span class="icon">✅</span>
+                <span>行动建议</span>
+            </a>
+            <a href="calendar.html" class="nav-item">
+                <span class="icon">📅</span>
+                <span>日历</span>
+            </a>
+            <a href="settings.html" class="nav-item">
+                <span class="icon">⚙️</span>
+                <span>设置</span>
+            </a>
+        </nav>
+        
+        <main class="main-content">
+            <div class="diary-list-container">
+                <div class="section-title">
+                    <h2>今日日记</h2>
+                    <button id="newDiaryBtn" class="btn-primary">+ 新日记</button>
+                </div>
+                
+                <div id="todayDiaries" class="diary-list">
+                    <!-- 日记列表将通过JS动态生成 -->
+                    <div class="empty-state">
+                        <p>今天还没有写日记呢</p>
+                        <button id="startFirstDiary" class="btn-primary">开始第一篇日记</button>
+                    </div>
+                </div>
+                
+                <div class="section-title">
+                    <h2>近期日记</h2>
+                </div>
+                
+                <div id="recentDiaries" class="diary-list">
+                    <!-- 近期日记列表将通过JS动态生成 -->
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/diary-entry.js"></script>
+</body>
+</html>
